@@ -1,0 +1,138 @@
+Project Workspace Report
+
+Question 2 – Secure Project Workspace Setup
+
+Command 1: pwd
+
+Output:
+/Users/shivangi/Linux_Lab_Assignment/Question2
+
+Observation:
+The pwd command displayed the current working directory. It confirmed that I was working inside the Question2 folder.
+
+--------------------------------------------------
+
+Command 2: mkdir ProjectWorkspace
+cd ProjectWorkspace
+mkdir Documents SourceCode
+touch Documents/plan.txt
+touch SourceCode/main.c
+
+Output:
+ProjectWorkspace
+├── Documents
+│   └── plan.txt
+└── SourceCode
+    └── main.c
+
+Observation:
+A secure project workspace was created with two subdirectories named Documents and SourceCode. A sample file was created in each directory.
+
+--------------------------------------------------
+
+Command 3: ls -R
+
+Output:
+Documents    SourceCode
+
+./Documents:
+plan.txt
+
+./SourceCode:
+main.c
+
+Observation:
+The ls -R command displayed the complete directory structure recursively. It confirmed that all folders and files were created successfully.
+
+--------------------------------------------------
+
+Command 4: ls -l
+ls -l Documents
+ls -l SourceCode
+
+Output:
+
+ProjectWorkspace
+drwxr-xr-x  3 shivangi  staff  96 Jul 3 18:22 Documents
+drwxr-xr-x  3 shivangi  staff  96 Jul 3 18:22 SourceCode
+
+Documents
+-rw-r--r--  1 shivangi  staff  0 Jul 3 18:22 plan.txt
+
+SourceCode
+-rw-r--r--  1 shivangi  staff  0 Jul 3 18:22 main.c
+
+Observation:
+The permissions before modification were 755 for directories and 644 for files. These permissions allow the owner to modify the files while other users have read-only access.
+
+--------------------------------------------------
+
+Command 5: chmod 755 Documents
+chmod 755 SourceCode
+chmod 644 Documents/plan.txt
+chmod 644 SourceCode/main.c
+
+Output:
+Permissions remained:
+
+Directories:
+drwxr-xr-x
+
+Files:
+-rw-r--r--
+
+Observation:
+The chmod command was used to set the required permissions. The permissions remained unchanged because they already matched the desired values.
+
+--------------------------------------------------
+
+Command 6: ls -ld Documents SourceCode
+
+Output:
+drwxr-xr-x  3 shivangi  staff  96 Jul 3 18:22 Documents
+drwxr-xr-x  3 shivangi  staff  96 Jul 3 18:22 SourceCode
+
+Observation:
+The ownership details show that the directories are owned by the user shivangi and belong to the staff group.
+
+--------------------------------------------------
+
+Command 7: umask
+
+Output:
+022
+
+Observation:
+The current umask value is 022. This default umask creates directories with permission 755 and files with permission 644.
+
+--------------------------------------------------
+
+Explanation of How Permissions Protect Project Data
+
+The directory permissions (755) allow only the owner to create, modify, and delete files, while other users can only read and access the directories. The file permissions (644) allow only the owner to edit the files, while other users can only read them. This helps protect the project files from unauthorized modifications while still allowing controlled access.
+
+--------------------------------------------------
+
+Summary
+
+Directory Structure:
+ProjectWorkspace
+├── Documents
+│   └── plan.txt
+└── SourceCode
+    └── main.c
+
+Permissions Before Modification:
+Directories: 755
+Files: 644
+
+Permissions After Modification:
+Directories: 755
+Files: 644
+
+Ownership:
+Owner: shivangi
+Group: staff
+
+Umask:
+022
