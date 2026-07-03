@@ -1,0 +1,112 @@
+IO Investigation Report
+
+Question 4 – File Access and I/O Investigation
+
+Command 1: pwd
+
+Output:
+/Users/shivangi/Linux_Lab_Assignment/Question4
+
+Observation:
+The pwd command displayed the current working directory. It confirmed that I was working inside the Question4 folder.
+
+--------------------------------------------------
+
+Command 2: echo "Linux I/O Experiment" > sample.txt
+
+Output:
+A file named sample.txt was created successfully.
+
+Observation:
+The echo command created a text file named sample.txt containing the text "Linux I/O Experiment".
+
+--------------------------------------------------
+
+Command 3: cat sample.txt
+
+Output:
+Linux I/O Experiment
+
+Observation:
+The cat command displayed the contents of the file and confirmed that the file was created successfully.
+
+--------------------------------------------------
+
+Command 4: lsof sample.txt
+
+Output:
+No output
+
+Observation:
+The lsof command checks whether a file is currently open by any process. No output indicates that no process was using sample.txt at the time of execution.
+
+--------------------------------------------------
+
+Command 5: ls -l /dev/fd
+
+Output:
+File descriptors 0, 1, 2, 3 and 4 were displayed.
+
+Observation:
+The /dev/fd directory displays active file descriptors. File descriptor 0 represents standard input, 1 represents standard output, and 2 represents standard error.
+
+--------------------------------------------------
+
+Command 6: echo "Output Redirection Successful" > output.txt
+
+Output:
+Output Redirection Successful
+
+Observation:
+The > operator redirected the command output into output.txt instead of displaying it on the terminal.
+
+--------------------------------------------------
+
+Command 7: ls nonexistentfile 2> error.txt
+
+Output:
+ls: nonexistentfile: No such file or directory
+
+Observation:
+The 2> operator redirected the error message into error.txt instead of displaying it on the terminal.
+
+--------------------------------------------------
+
+Command 8: ulimit -a
+
+Output:
+CPU Time: unlimited
+File Size: unlimited
+Stack Size: 8176 KB
+Processes: 1333
+Open File Descriptors: 2560
+
+Observation:
+The ulimit command displayed the current resource limits configured for the shell, including the maximum number of open files and processes.
+
+--------------------------------------------------
+
+Explanation of Linux File I/O
+
+Linux manages file input and output using file descriptors. Standard input uses file descriptor 0, standard output uses file descriptor 1, and standard error uses file descriptor 2. Output redirection (>) stores command output in a file, while error redirection (2>) stores error messages separately. This mechanism helps organize program output and simplifies debugging.
+
+--------------------------------------------------
+
+Summary
+
+Open Files:
+No process was using sample.txt during the experiment.
+
+File Descriptor Observation:
+Standard input = 0
+Standard output = 1
+Standard error = 2
+
+Output Redirection:
+Successfully redirected output to output.txt.
+
+Error Redirection:
+Successfully redirected error messages to error.txt.
+
+Resource Limits:
+The shell displayed limits for CPU time, file size, stack size, processes, and open file descriptors.
