@@ -1,0 +1,107 @@
+Storage Assessment Report
+
+Question 5 – Storage Health Assessment and Documentation
+
+Command 1: pwd
+
+Output:
+/Users/shivangi/Linux_Lab_Assignment/Question5
+
+Observation:
+The pwd command displayed the current working directory. It confirmed that I was working inside the Question5 folder.
+
+--------------------------------------------------
+
+Command 2: diskutil list
+
+Output:
+Internal physical disk (disk0) with an APFS partition scheme.
+APFS containers and volumes including Macintosh HD, Macintosh HD - Data, Recovery, Preboot, and VM were displayed.
+
+Observation:
+The diskutil list command displayed all available storage devices and partitions. It showed the internal physical disk and the APFS containers used by macOS.
+
+--------------------------------------------------
+
+Command 3: mount
+
+Output:
+Mounted file systems included:
+/
+System/Volumes/VM
+System/Volumes/Preboot
+System/Volumes/Recovery
+System/Volumes/Data
+and other APFS system volumes.
+
+Observation:
+The mount command displayed all mounted file systems currently available on the system. It confirmed that multiple APFS volumes are mounted for macOS operation.
+
+--------------------------------------------------
+
+Command 4: df -h
+
+Output:
+Root Volume:
+/dev/disk3s1s1
+Size: 228 GiB
+Used: 13 GiB
+Available: 112 GiB
+
+Data Volume:
+/dev/disk3s5
+Size: 228 GiB
+Used: 90 GiB
+Available: 112 GiB
+
+Observation:
+The df -h command displayed disk usage statistics in a human-readable format. The storage has sufficient free space available for normal system operation.
+
+--------------------------------------------------
+
+Command 5: df -i
+
+Output:
+The inode utilization for all APFS volumes is very low (0% inode usage).
+
+Observation:
+The df -i command displayed inode usage statistics. The available inode count is very high, indicating that the file system has plenty of capacity for creating additional files.
+
+--------------------------------------------------
+
+Storage Health Observations
+
+• The internal storage device is functioning normally.
+• Multiple APFS volumes are mounted correctly.
+• Approximately 112 GiB of storage space is available.
+• The Data volume is using about 45% of its available storage.
+• Inode utilization is very low, indicating no inode shortage.
+
+--------------------------------------------------
+
+Recommendations
+
+1. Regularly monitor available disk space.
+2. Remove unnecessary files to maintain sufficient free storage.
+3. Perform periodic backups to prevent data loss.
+4. Monitor storage utilization to avoid running out of disk space.
+5. Continue maintaining healthy free space for better system performance.
+
+--------------------------------------------------
+
+Summary
+
+Available Storage Devices:
+Internal physical disk (disk0) with APFS containers and volumes.
+
+Mounted File Systems:
+Root (/), Data, VM, Recovery, Preboot and other APFS volumes.
+
+Disk Usage:
+Approximately 112 GiB of free storage is available.
+
+Inode Utilization:
+Very low inode usage (0%).
+
+Overall Storage Health:
+The storage system is healthy with sufficient free space and normal inode utilization.
