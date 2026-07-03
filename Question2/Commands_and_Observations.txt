@@ -1,0 +1,105 @@
+Question 2 – Commands and Observations
+
+1. Command:
+pwd
+
+Purpose:
+Displays the current working directory.
+
+Observation:
+The command confirmed that I was working inside the Question2 directory.
+
+--------------------------------------------------
+
+2. Command:
+mkdir ProjectWorkspace
+cd ProjectWorkspace
+
+Purpose:
+Creates a new project workspace directory and moves into it.
+
+Observation:
+A new directory named ProjectWorkspace was successfully created and opened.
+
+--------------------------------------------------
+
+3. Command:
+mkdir Documents SourceCode
+
+Purpose:
+Creates two subdirectories for organizing project files.
+
+Observation:
+The Documents and SourceCode folders were created successfully.
+
+--------------------------------------------------
+
+4. Command:
+touch Documents/plan.txt
+touch SourceCode/main.c
+
+Purpose:
+Creates sample files inside each directory.
+
+Observation:
+The files plan.txt and main.c were created successfully.
+
+--------------------------------------------------
+
+5. Command:
+ls -R
+
+Purpose:
+Displays the complete directory structure recursively.
+
+Observation:
+The command confirmed that the folders and files were organized correctly.
+
+--------------------------------------------------
+
+6. Command:
+ls -l
+ls -l Documents
+ls -l SourceCode
+
+Purpose:
+Displays file permissions and ownership details.
+
+Observation:
+The directories had 755 permissions and the files had 644 permissions.
+
+--------------------------------------------------
+
+7. Command:
+chmod 755 Documents
+chmod 755 SourceCode
+chmod 644 Documents/plan.txt
+chmod 644 SourceCode/main.c
+
+Purpose:
+Sets the required permissions for directories and files.
+
+Observation:
+The permissions already matched the required values, so no visible changes occurred.
+
+--------------------------------------------------
+
+8. Command:
+ls -ld Documents SourceCode
+
+Purpose:
+Displays ownership information for the directories.
+
+Observation:
+The directories are owned by the user shivangi and belong to the staff group.
+
+--------------------------------------------------
+
+9. Command:
+umask
+
+Purpose:
+Displays the default permission mask.
+
+Observation:
+The current umask value was 022, resulting in default permissions of 755 for directories and 644 for files.
