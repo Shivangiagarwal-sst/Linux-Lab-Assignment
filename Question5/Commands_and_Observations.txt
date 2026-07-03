@@ -1,0 +1,76 @@
+Question 5 – Commands and Observations
+
+1. Command:
+pwd
+
+Purpose:
+Displays the current working directory.
+
+Observation:
+The command confirmed that I was working inside the Question5 directory.
+
+--------------------------------------------------
+
+2. Command:
+diskutil list
+
+Purpose:
+Displays all available storage devices and partitions on the system.
+
+Observation:
+The command listed the internal physical disk, APFS containers, and volumes such as Macintosh HD, Data, Recovery, Preboot, and VM.
+
+--------------------------------------------------
+
+3. Command:
+mount
+
+Purpose:
+Displays all currently mounted file systems.
+
+Observation:
+The output showed multiple APFS volumes mounted by macOS, including the root, Data, VM, Recovery, and Preboot volumes.
+
+--------------------------------------------------
+
+4. Command:
+df -h
+
+Purpose:
+Displays disk usage information in a human-readable format.
+
+Observation:
+The command showed the total, used, and available disk space for each mounted file system. The system has sufficient free storage available.
+
+--------------------------------------------------
+
+5. Command:
+df -i
+
+Purpose:
+Displays inode usage statistics for all mounted file systems.
+
+Observation:
+The output showed very low inode utilization, indicating that there are plenty of inodes available for creating new files.
+
+--------------------------------------------------
+
+6. Command:
+vi Storage_Assessment_Report.txt
+
+Purpose:
+Opens the report file using the vi text editor.
+
+Observation:
+The report was created and edited successfully using the vi editor as required by the assignment.
+
+--------------------------------------------------
+
+7. Command:
+cat Storage_Assessment_Report.txt
+
+Purpose:
+Displays the contents of the completed storage assessment report.
+
+Observation:
+The report contents were displayed successfully, confirming that the file was saved correctly.
