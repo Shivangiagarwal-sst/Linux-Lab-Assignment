@@ -1,0 +1,133 @@
+Question 3 – Commands and Observations
+
+1. Command:
+pwd
+
+Purpose:
+Displays the current working directory.
+
+Observation:
+The command confirmed that I was working inside the Question3 directory.
+
+--------------------------------------------------
+
+2. Command:
+echo "Linux Link Experiment" > original.txt
+
+Purpose:
+Creates a new text file and writes sample content into it.
+
+Observation:
+The file original.txt was successfully created with the required text.
+
+--------------------------------------------------
+
+3. Command:
+cat original.txt
+
+Purpose:
+Displays the contents of the file.
+
+Observation:
+The command verified that the file contains "Linux Link Experiment".
+
+--------------------------------------------------
+
+4. Command:
+ln original.txt hardlink.txt
+
+Purpose:
+Creates a hard link to the original file.
+
+Observation:
+The hard link was created successfully and refers to the same file data as the original file.
+
+--------------------------------------------------
+
+5. Command:
+ln -s original.txt symlink.txt
+
+Purpose:
+Creates a symbolic (soft) link to the original file.
+
+Observation:
+The symbolic link was created successfully and points to original.txt.
+
+--------------------------------------------------
+
+6. Command:
+ls -l
+
+Purpose:
+Displays detailed information about all files.
+
+Observation:
+The output showed both the hard link and symbolic link along with their permissions and link information.
+
+--------------------------------------------------
+
+7. Command:
+ls -li
+
+Purpose:
+Displays inode numbers for all files.
+
+Observation:
+The hard link and original file shared the same inode number, while the symbolic link had a different inode number.
+
+--------------------------------------------------
+
+8. Command:
+stat original.txt
+stat hardlink.txt
+stat symlink.txt
+
+Purpose:
+Displays detailed metadata for each file.
+
+Observation:
+The metadata confirmed that the hard link shares the same inode as the original file, while the symbolic link has its own inode.
+
+--------------------------------------------------
+
+9. Command:
+rm original.txt
+
+Purpose:
+Deletes the original file.
+
+Observation:
+The original file was removed successfully from the directory.
+
+--------------------------------------------------
+
+10. Command:
+ls -l
+
+Purpose:
+Displays the remaining files after deletion.
+
+Observation:
+The hard link remained available, while the symbolic link pointed to a file that no longer existed.
+
+--------------------------------------------------
+
+11. Command:
+cat hardlink.txt
+
+Purpose:
+Reads the contents of the hard link.
+
+Observation:
+The file contents were displayed successfully because the hard link still references the original data.
+
+--------------------------------------------------
+
+12. Command:
+cat symlink.txt
+
+Purpose:
+Attempts to read the symbolic link.
+
+Observation:
+The command returned an error because the symbolic link became broken after the original file was deleted.
