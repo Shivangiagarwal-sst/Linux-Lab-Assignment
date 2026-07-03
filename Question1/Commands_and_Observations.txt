@@ -1,0 +1,65 @@
+Question 1 – Commands and Observations
+
+1. Command:
+whoami
+
+Purpose:
+Displays the username of the currently logged-in user.
+
+Observation:
+The command returned the username "shivangi", confirming the current user account.
+
+--------------------------------------------------
+
+2. Command:
+groups
+
+Purpose:
+Displays all groups associated with the current user.
+
+Observation:
+The output showed that the user belongs to several system and administrative groups.
+
+--------------------------------------------------
+
+3. Command:
+echo $SHELL
+
+Purpose:
+Displays the current login shell.
+
+Observation:
+The command showed that the default shell is /bin/zsh.
+
+--------------------------------------------------
+
+4. Command:
+pwd
+
+Purpose:
+Displays the current working directory.
+
+Observation:
+The output confirmed that I was working inside the Question1 folder.
+
+--------------------------------------------------
+
+5. Command:
+ls -la
+
+Purpose:
+Displays all files and directories with detailed information.
+
+Observation:
+The command showed the contents of the Question1 directory and their permissions.
+
+--------------------------------------------------
+
+6. Command:
+ping -c 4 google.com
+
+Purpose:
+Checks network connectivity.
+
+Observation:
+The command successfully reached google.com with 0% packet loss, confirming network connectivity.
