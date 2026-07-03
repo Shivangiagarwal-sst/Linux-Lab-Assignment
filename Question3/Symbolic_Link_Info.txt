@@ -1,0 +1,13 @@
+Symbolic Link Information
+
+Command used:
+ln -s original.txt symlink.txt
+
+The symbolic link (symlink.txt) was successfully created during the experiment.
+
+After deleting the original file using:
+rm original.txt
+
+the symbolic link became broken and could not be uploaded through GitHub's web interface because it points to a file that no longer exists.
+
+This behavior demonstrates that symbolic links depend on the existence of the original target file.
