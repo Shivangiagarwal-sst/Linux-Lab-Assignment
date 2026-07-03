@@ -1,0 +1,85 @@
+Environment Report
+
+Question 1 – Linux Environment Verification
+
+Command 1: whoami
+
+Output:
+shivangi
+
+Observation:
+The whoami command displays the username of the currently logged-in user. The output confirms that the current user is shivangi.
+
+--------------------------------------------------
+
+Command 2: groups
+
+Output:
+staff everyone localaccounts _appserverusr admin _appserveradm _lpadmin com.apple.sharepoint.group.1 _appstore _lpoperator _developer _analyticsusers com.apple.access_ftp com.apple.access_screensharing com.apple.access_ssh com.apple.access_remote_ae
+
+Observation:
+The groups command lists all the groups associated with the current user account. The output shows that the user belongs to multiple system and administrative groups, including the staff and admin groups.
+
+--------------------------------------------------
+
+Command 3: echo $SHELL
+
+Output:
+/bin/zsh
+
+Observation:
+The echo $SHELL command displays the default login shell of the current user. The output shows that the current shell is /bin/zsh.
+
+--------------------------------------------------
+
+Command 4: pwd
+
+Output:
+/Users/shivangi/Linux_Lab_Assignment/Question1
+
+Observation:
+The pwd command displays the absolute path of the current working directory. The output confirms that I am currently working inside the Question1 folder.
+
+--------------------------------------------------
+
+Command 5: ls -la
+
+Output:
+total 0
+drwxr-xr-x  2 shivangi  staff   64 Jul 3 16:56 .
+drwxr-xr-x  7 shivangi  staff  224 Jul 3 16:56 ..
+
+Observation:
+The ls -la command lists all files and directories, including hidden entries, along with their permissions and ownership. The output shows that the directory currently contains only the default "." and ".." entries.
+
+--------------------------------------------------
+
+Command 6: ping -c 4 google.com
+
+Output:
+4 packets transmitted, 4 packets received, 0.0% packet loss
+
+Observation:
+The ping command verifies network connectivity by sending packets to an external server. The successful replies with 0% packet loss confirm that the internet connection is working properly.
+
+--------------------------------------------------
+
+Summary
+
+Username:
+shivangi
+
+Groups:
+staff, everyone, localaccounts, admin, and other system groups.
+
+Current Shell:
+/bin/zsh
+
+Current Working Directory:
+/Users/shivangi/Linux_Lab_Assignment/Question1
+
+Files and Directories:
+The directory initially contained only the default "." and ".." entries.
+
+Network Connectivity:
+Successfully verified using the ping command with no packet loss.
